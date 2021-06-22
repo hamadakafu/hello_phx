@@ -3,10 +3,11 @@ defmodule HelloPhx.User do
   import Ecto.Changeset
 
   @derive {Jason.Encoder, only: [:id, :email]}
-  @primary_key {:id, Ecto.UUID, autogenerate: true}
+  @primary_key {:id, :binary_id, autogenerate: true}
   schema "users" do
     field :email, :string
-    timestamps()
+    has_many :texts, HelloPhx.Text
+    timestamps(type: :utc_datetime)
   end
 
   @doc false

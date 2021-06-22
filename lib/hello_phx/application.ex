@@ -14,9 +14,10 @@ defmodule HelloPhx.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: HelloPhx.PubSub},
       # Start the Endpoint (http/https)
-      HelloPhxWeb.Endpoint
+      HelloPhxWeb.Endpoint,
       # Start a worker by calling: HelloPhx.Worker.start_link(arg)
       # {HelloPhx.Worker, arg}
+      HelloPhx.TextCrawl
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
