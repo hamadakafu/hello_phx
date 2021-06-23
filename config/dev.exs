@@ -43,3 +43,5 @@ config :phoenix, :stacktrace_depth, 20
 config :phoenix, :plug_init_mode, :runtime
 
 config :hello_phx, :basic_auth, username: "hello", password: "secret"
+
+config :hello_phx, HelloPhx.HttpCrawl, url: "http://localhost:4000"

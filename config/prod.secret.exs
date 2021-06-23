@@ -36,9 +36,13 @@ basic_auth_username =
     raise """
     environment variable BASIC_AUTH_USERNAME is missing.
     """
+
 basic_auth_password =
   System.get_env("BASIC_AUTH_PASSWORD") ||
     raise """
     environment variable BASIC_AUTH_PASSWORD is missing.
     """
+
 config :hello_phx, :basic_auth, username: basic_auth_username, password: basic_auth_password
+
+config :hello_phx, HelloPhx.HttpCrawl, url: "https://ya-airdrop.herokuapp.com"

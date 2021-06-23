@@ -35,3 +35,6 @@ npm-debug.log
 
 # editor
 .idea
+
+# local
+.envrc
