@@ -17,7 +17,8 @@ defmodule HelloPhx.Application do
       HelloPhxWeb.Endpoint,
       # Start a worker by calling: HelloPhx.Worker.start_link(arg)
       # {HelloPhx.Worker, arg}
-      HelloPhx.TextCrawl
+      HelloPhx.TextCrawl,
+      HelloPhx.HttpCrawl
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
